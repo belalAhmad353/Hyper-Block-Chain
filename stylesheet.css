@@ -1,48 +1,79 @@
 * {
-    width: 1920;
-    height: 7000px;
-    background: #1E1E1E;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* left side */
+/* Body */
+
+body {
+    min-height: 100vh;
+    background: #1d1d1d;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+
 .navbar {
-    height: 120px;
+    width: 100%;
+    height: 75px;
     background: #1d1d1d;
     display: flex;
     align-items: center;
-    padding: 0 115px;
+    padding: 15px 5%;
     position: relative;
+    border: 2px solid #0798ff;
 }
 
-.nav-left button {
+/* ---------------- LEFT MENU ---------------- */
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-item {
+    background: transparent;
     border: none;
-    color: rgba(255, 255, 255, 0.50);
-    font-family: Poppins;
-    font-size: 16px;
-    font-style: normal;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
     font-weight: 500;
     line-height: 100%;
-    /* 16px */
+    /* gap: 2px; */
+    color: rgba(255, 255, 255, 0.50);
+    font-style: normal;
 }
 
-.nav-left button span {
+.nav-item:hover {
+    color: white;
+}
+
+/* Small Arrow */
+
+.arrow {
     width: 24px;
     height: 24px;
 }
 
-/* center */
+/* ---------------- CENTER LOGO ---------------- */
+
 .logo-container {
-    border: none;
-    color: #FFFFFF;
-    width: 42.946px;
-    height: 42.946px;
+    margin-left: 400px;
+    /* width: 10px;
+    height: 10px; */
     aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 8px; */
+    position: absolute;
 }
 
+/* Hyper Text */
+
 .logo-text {
-    border: none;
-    width: 73px;
-    height: 24;
     color: #FFF;
     font-family: Poppins;
     font-size: 24px;
@@ -52,48 +83,340 @@
     /* 24px */
 }
 
-/* right */
+
+/* ---------------- RIGHT MENU ---------------- */
+
 .nav-right {
     margin-left: auto;
-
     display: flex;
     align-items: center;
-
-    gap: 35px;
+    gap: 20px;
 }
+
 
 .nav-right a {
-    color: #999;
+    color: rgba(255, 255, 255, 0.50);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
     text-decoration: none;
-    font-size: 10px;
 }
 
-.search {
-    width: 150px;
-    height: 25px;
 
+.nav-right a:hover {
+    color: white;
+}
+
+
+/* ---------------- SEARCH BOX ---------------- */
+
+.search-box {
+    width: 180px;
+    height: 30px;
     border: 1px solid #555;
     border-radius: 20px;
-
     display: flex;
     align-items: center;
-
-    padding: 0 10px;
+    padding: 0 9px;
 }
 
-.search input {
-    flex: 1;
 
+.search-box input {
+    width: 100%;
     background: transparent;
     border: none;
     outline: none;
-
     color: white;
-
-    font-size: 9px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 7px;
 }
 
-.search input::placeholder {
-    color: #888;
+
+.search-box input::placeholder {
+    color: #777;
     font-style: italic;
+}
+
+
+.search-icon {
+    width: 24px;
+    height: 24px;
+    line-height: 1;
+}
+
+/* ======================
+        SECTION
+=======================*/
+.blockchain {
+    position: relative;
+    width: 100%;
+    /* min-height: 650px; */
+    /* padding: 40px 50px 30px; */
+    box-sizing: border-box;
+    /* background: #1c1c1c; */
+    color: #ffffff;
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* =========================
+   LARGE BLOCKCHAIN TITLE
+========================= */
+
+.blockchain-title {
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    margin: 0 20px;
+    font-weight: 700;
+    letter-spacing: -4px;
+    font-size: 130px;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.blockchain-content {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2.2fr 1fr;
+    align-items: center;
+    min-height: 400px;
+    margin-top: 50px;
+    z-index: 2;
+}
+
+
+/* =========================
+   LEFT TEXT
+========================= */
+
+.blockchain-left {
+    align-self: center;
+    color: #FFF;
+    margin-left: 125px;
+    leading-trim: both;
+    /* font-family: Poppins; */
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.blockchain-left p {
+    margin: 0;
+
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 200;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   CENTER IMAGE
+========================= */
+
+.blockchain-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.blockchain-image img {
+    display: block;
+
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   RIGHT CONTENT
+========================= */
+
+.blockchain-right {
+    max-width: 230px;
+
+    justify-self: end;
+}
+
+.blockchain-right p {
+    margin: 0 0 25px;
+
+    font-size: 12px;
+    line-height: 1.7;
+
+    color: #bcbcbc;
+}
+
+.blockchain-right button {
+    padding: 10px 18px;
+
+    border: none;
+    border-radius: 5px;
+
+    background: #333333;
+    color: #ffffff;
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+.blockchain-right button:hover {
+    background: #444444;
+}
+
+
+/* =========================
+   BOTTOM SECTION
+========================= */
+
+.blockchain-bottom {
+    position: absolute;
+
+    left: 30px;
+    right: 30px;
+    bottom: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    z-index: 3;
+}
+
+
+/* =========================
+   STATISTICS
+========================= */
+
+.blockchain-stats {
+    display: flex;
+    gap: 70px;
+}
+
+.stat p {
+    margin: 0 0 8px;
+
+    font-size: 10px;
+    color: #bdbdbd;
+}
+
+.stat span {
+    display: block;
+
+    font-size: 24px;
+    font-weight: 400;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   SMART CONTRACT CARD
+========================= */
+
+.smart-contract {
+    width: 190px;
+    min-height: 68px;
+
+    padding: 12px 20px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 1px solid #555555;
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.02);
+
+    color: #ffffff;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.smart-contract .arrow {
+    font-size: 18px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .blockchain {
+        min-height: 700px;
+    }
+
+    .blockchain-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-top: 130px;
+        text-align: center;
+    }
+
+    .blockchain-left {
+        justify-self: center;
+    }
+
+    .blockchain-image {
+        order: 2;
+    }
+
+    .blockchain-right {
+        order: 3;
+        justify-self: center;
+        max-width: 300px;
+    }
+
+    .blockchain-bottom {
+        position: relative;
+
+        left: auto;
+        right: auto;
+        bottom: auto;
+
+        margin-top: 30px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .blockchain {
+        padding: 25px 20px;
+    }
+
+    .blockchain-title {
+        left: 10px;
+        font-size: 58px;
+        letter-spacing: -2px;
+    }
+
+    .blockchain-stats {
+        gap: 25px;
+    }
+
+    .smart-contract {
+        width: 160px;
+    }
 }
